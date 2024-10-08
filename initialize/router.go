@@ -18,6 +18,10 @@ func Routers() *gin.Engine {
 		Router.Use(gin.Logger())
 	}
 
+	Router.GET("/", func(context *gin.Context) {
+		context.String(200, "Hello World")
+	})
+
 	systemGroup := Router.Group("")
 	router.RouterGroupApp.InitFilterateRouter(systemGroup)
 

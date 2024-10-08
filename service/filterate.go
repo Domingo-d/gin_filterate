@@ -7,6 +7,7 @@
 package service
 
 import (
+	"filterate/global"
 	"filterate/model/request"
 	"filterate/model/response"
 )
@@ -16,10 +17,7 @@ type (
 )
 
 func (receiver *FilterateService) Filter(info *request.FilterateReq) *response.FilterateRes {
-
-	// filter(info.Str)
-
-	res := &response.FilterateRes{}
+	res := &response.FilterateRes{Str: global.AhoCorasick.SearchAndReplace(info.Str)}
 
 	return res
 }

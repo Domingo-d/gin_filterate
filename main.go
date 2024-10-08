@@ -7,12 +7,9 @@
 package main
 
 import (
-	"filterate/initialize"
-	"net/http"
+	"filterate/core"
 )
 
 func main() {
-	Router := initialize.Routers()
-	s := &http.Server{Addr: "0:0:0:0:9999", Handler: Router}
-	s.ListenAndServe()
+	core.RunServer()
 }
