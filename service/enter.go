@@ -9,6 +9,7 @@ package service
 type (
 	ServiceGroup struct {
 		FilterateService
+		FileService
 	}
 )
 

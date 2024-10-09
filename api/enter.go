@@ -16,4 +16,5 @@ var (
 	ApiGroupApp = new(ApiGroup)
 
 	filterateService = service.ServiceGroupApp.FilterateService
+	fileService      = service.ServiceGroupApp.FileService
 )

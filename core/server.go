@@ -15,8 +15,9 @@ import (
 
 func RunServer() {
 	global.AhoCorasick = initialize.NewAhoCorasick()
-	global.AhoCorasick.ReadPattern("filterate.txt")
-	global.AhoCorasick.Build()
+	if nil == global.AhoCorasick.ReadPattern(global.FilterateName) {
+		global.AhoCorasick.Build()
+	}
 
 	global.Router = initialize.Routers()
 
