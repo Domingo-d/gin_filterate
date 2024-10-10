@@ -24,4 +24,6 @@ func RunServer() {
 	s := &http.Server{Addr: "0.0.0.0:8080", Handler: global.Router}
 
 	log.Fatalf("----------- %v ------------", s.ListenAndServe())
+
+	log.Println("服务退出")
 }
