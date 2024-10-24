@@ -10,6 +10,7 @@ type (
 	ServiceGroup struct {
 		FilterateService
 		FileService
+		UserService
 	}
 )
 

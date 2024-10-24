@@ -10,6 +10,8 @@ import "filterate/service"
 
 type ApiGroup struct {
 	FilterateApi
+	FileApi
+	LoginApi
 }
 
 var (
@@ -17,4 +19,5 @@ var (
 
 	filterateService = service.ServiceGroupApp.FilterateService
 	fileService      = service.ServiceGroupApp.FileService
+	userService      = service.ServiceGroupApp.UserService
 )

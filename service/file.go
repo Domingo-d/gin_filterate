@@ -2,7 +2,6 @@ package service
 
 import (
 	"filterate/global"
-	"filterate/initialize"
 	"io"
 	"mime/multipart"
 	"net/http"
@@ -14,7 +13,7 @@ type (
 )
 
 func (fileService *FileService) UpdateFile(fh multipart.File) uint {
-	file, err := os.Create(global.FilterateName)
+	file, err := os.Create(global.Config.FilterateName)
 	if err != nil {
 		return http.StatusInternalServerError
 	}
@@ -29,13 +28,14 @@ func (fileService *FileService) UpdateFile(fh multipart.File) uint {
 }
 
 func (fileService *FileService) ReLoad() uint {
-	tmpCorasick := initialize.NewAhoCorasick()
-	if nil != tmpCorasick.ReadPattern(global.FilterateName) {
+	tmpCorasick := global.AhoCorasick.NewAhoCorasick()
+	if io.EOF != tmpCorasick.ReadPattern(global.Config.FilterateName) {
 		return http.StatusInternalServerError
 	}
 
 	tmpCorasick.Build()
 
+	// 指针赋值是原子操作
 	global.AhoCorasick = tmpCorasick
 
 	return http.StatusOK

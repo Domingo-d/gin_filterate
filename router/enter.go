@@ -6,12 +6,25 @@
 
 package router
 
+import (
+	"filterate/middleware"
+	"github.com/gin-gonic/gin"
+)
+
 type (
 	RouterGroup struct {
 		FilterateApi
+		PublicApi
 	}
 )
 
 var (
 	RouterGroupApp = new(RouterGroup)
 )
+
+func InitRouter(public, private *gin.RouterGroup) {
+	RouterGroupApp.InitPublicRouter(public)
+
+	private.Use(middleware.JWTMiddleware())
+	RouterGroupApp.InitFilterateRouter(private)
+}

@@ -30,6 +30,10 @@ func NewAhoCorasick() *AhoCorasick {
 	return &AhoCorasick{root: &TrieNode{children: make(map[rune]*TrieNode)}}
 }
 
+func (ac *AhoCorasick) NewAhoCorasick() *AhoCorasick {
+	return NewAhoCorasick()
+}
+
 // AddPattern 添加敏感字
 func (ac *AhoCorasick) AddPattern(pattern string) {
 	node := ac.root

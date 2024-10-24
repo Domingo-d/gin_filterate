@@ -10,4 +10,18 @@ type (
 	FilterateReq struct {
 		Str string `json:"str"`
 	}
+
+	SignInReq struct {
+		UserName string `json:"username"`
+		PassWord string `json:"password"`
+	}
+
+	SignUpReq struct {
+		UserName string `json:"username"`
+		PassWord string `json:"password"`
+	}
+
+	SignOutReq struct {
+		UserName string `json:"username"`
+	}
 )
