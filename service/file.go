@@ -1,11 +1,11 @@
 package service
 
 import (
-	"filterate/global"
 	"io"
 	"mime/multipart"
 	"net/http"
 	"os"
+	"server/global"
 )
 
 type (

@@ -2,9 +2,9 @@ package utils
 
 import (
 	"errors"
-	"filterate/global"
 	"go.uber.org/zap"
 	"os"
+	"server/global"
 )
 
 func PathExists(path string) (bool, error) {

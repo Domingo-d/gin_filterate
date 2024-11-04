@@ -1,10 +1,10 @@
 package core
 
 import (
-	"filterate/global"
 	"fmt"
 	"github.com/fsnotify/fsnotify"
 	"github.com/spf13/viper"
+	"server/global"
 )
 
 func Viper(confName string) *viper.Viper {

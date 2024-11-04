@@ -6,7 +6,7 @@
 
 package initialize
 
-import "filterate/model"
+import "server/model"
 
 func NewAhoCorasick() *model.AhoCorasick {
 	return model.NewAhoCorasick()

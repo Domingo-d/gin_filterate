@@ -1,11 +1,11 @@
 package utils
 
 import (
-	"filterate/global"
-	"filterate/model"
 	"github.com/dgrijalva/jwt-go"
 	"github.com/gin-gonic/gin"
 	"go.uber.org/zap"
+	"server/global"
+	"server/model"
 	"time"
 )
 

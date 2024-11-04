@@ -8,8 +8,6 @@ package core
 
 import (
 	"context"
-	"filterate/global"
-	"filterate/initialize"
 	"flag"
 	"github.com/gin-gonic/gin"
 	"go.uber.org/zap"
@@ -17,6 +15,8 @@ import (
 	"net/http"
 	"os"
 	"os/signal"
+	"server/global"
+	"server/initialize"
 	"syscall"
 	"time"
 )

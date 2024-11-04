@@ -7,11 +7,11 @@
 package initialize
 
 import (
-	"filterate/global"
-	"filterate/router"
 	"github.com/gin-gonic/gin"
 	"go.uber.org/zap/zapio"
 	"net/http"
+	"server/global"
+	"server/router"
 )
 
 func Routers() *gin.Engine {

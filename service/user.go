@@ -5,14 +5,14 @@ import (
 	"context"
 	"crypto/rand"
 	"errors"
-	"filterate/global"
-	"filterate/global/common"
-	"filterate/model"
-	"filterate/model/request"
-	"filterate/utils"
 	"go.uber.org/zap"
 	"golang.org/x/crypto/argon2"
 	"net/http"
+	"server/global"
+	"server/global/common"
+	"server/model"
+	"server/model/request"
+	"server/utils"
 )
 
 type (

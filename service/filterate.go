@@ -7,9 +7,9 @@
 package service
 
 import (
-	"filterate/global"
-	"filterate/model/request"
-	"filterate/model/response"
+	"server/global"
+	"server/model/request"
+	"server/model/response"
 )
 
 type (

@@ -7,8 +7,8 @@
 package router
 
 import (
-	"filterate/api"
 	"github.com/gin-gonic/gin"
+	"server/api"
 )
 
 type (

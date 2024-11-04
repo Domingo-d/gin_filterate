@@ -7,8 +7,8 @@
 package api
 
 import (
-	"filterate/model/request"
 	"github.com/gin-gonic/gin"
+	"server/model/request"
 )
 
 type (

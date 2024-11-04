@@ -6,7 +6,7 @@
 
 package api
 
-import "filterate/service"
+import "server/service"
 
 type ApiGroup struct {
 	FilterateApi

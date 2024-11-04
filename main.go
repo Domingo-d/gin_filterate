@@ -7,7 +7,7 @@
 package main
 
 import (
-	"filterate/core"
+	"server/core"
 )
 
 func main() {

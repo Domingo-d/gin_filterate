@@ -7,8 +7,8 @@
 package router
 
 import (
-	"filterate/middleware"
 	"github.com/gin-gonic/gin"
+	"server/middleware"
 )
 
 type (

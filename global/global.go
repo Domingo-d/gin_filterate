@@ -7,12 +7,12 @@
 package global
 
 import (
-	"filterate/config"
-	"filterate/model"
 	"github.com/gin-gonic/gin"
 	"github.com/go-redis/redis/v8"
 	"github.com/spf13/viper"
 	"go.uber.org/zap"
+	"server/config"
+	"server/model"
 )
 
 var (

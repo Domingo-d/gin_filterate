@@ -1,9 +1,9 @@
 package middleware
 
 import (
-	"filterate/utils"
 	"github.com/gin-gonic/gin"
 	"net/http"
+	"server/utils"
 	"strings"
 )
 
